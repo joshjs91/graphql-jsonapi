@@ -15,13 +15,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Data
-@JsonApiResource(type = "breweries")
 @EqualsAndHashCode
 @Entity
 public class Brewery {
 
     @Id
-    @JsonApiId
     @Column(name = "ID", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

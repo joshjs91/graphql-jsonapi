@@ -12,7 +12,6 @@ import javax.persistence.ManyToOne;
 @Data
 @EqualsAndHashCode
 @Entity
-@JsonApiResource(type = "ingredients")
 public class Ingredient {
 
     @Id

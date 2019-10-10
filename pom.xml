@@ -50,34 +50,6 @@
             <artifactId>graphiql-spring-boot-starter</artifactId>
             <version>5.0.2</version>
         </dependency>
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-setup-spring-boot2</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-client</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-validation</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-security</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-jpa</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-
-
-
 
         <dependency>
             <groupId>com.h2database</groupId>

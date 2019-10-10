@@ -19,11 +19,9 @@ import javax.persistence.OneToMany;
 @Data
 @EqualsAndHashCode
 @Entity
-@JsonApiResource(type = "beers")
 public class Beer {
 
     @Id
-    @JsonApiId
     @Column(name = "ID", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
