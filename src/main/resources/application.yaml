@@ -2,7 +2,7 @@ crnk:
   pathPrefix: /beer-api
   default-page-limit: 20
   security:
-    enabled: true
+    enabled: false
   spring:
     cloud:
       sleuth:
