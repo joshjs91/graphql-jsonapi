@@ -1,0 +1,63 @@
+type Beer {
+	id: ID,
+	style: String,
+	name: String,
+	brewery: Brewery!
+	ingredients: [Ingredient]
+}
+
+
+type Ingredient {
+	name: String,
+	amount: Float,
+	measurement: String
+}
+
+
+type Brewery {
+	id: ID,
+	name: String,
+	location: String
+	beers: [Beer]!
+	#this is saying an array of beers
+}
+
+
+
+
+
+
+
+input IngredientInput {
+	name: String,
+	amount: Float,
+	measurement: String
+}
+
+
+
+
+#get
+type Query {
+	beers(count: Int):[Beer]
+	beer(id: ID):Beer
+	brewery(id: ID):Brewery
+}
+
+
+
+
+#mutations are what a post put patch methods is for rest
+type Mutation {
+
+
+	createBeer(style: String!, name: String!, breweryId: ID):Beer
+	createBrewery(name: String!, location: String):Brewery
+
+
+
+
+	createBeerWithIngredients(style: String!, name: String!, breweryId: ID, ingredients: [IngredientInput]):Beer
+
+
+}
