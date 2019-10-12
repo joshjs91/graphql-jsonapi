@@ -1,7 +1,6 @@
 package com.josh.graphql.entity;
 
-import io.crnk.core.resource.annotations.JsonApiId;
-import io.crnk.core.resource.annotations.JsonApiResource;
+import com.yahoo.elide.annotation.Include;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -12,10 +11,10 @@ import javax.persistence.ManyToOne;
 @Data
 @EqualsAndHashCode
 @Entity
+@Include(type = "ingredient")
 public class Ingredient {
 
     @Id
-    @JsonApiId
     private int id;
 
     @ManyToOne
