@@ -1,4 +1,4 @@
-package com.josh.graphql.graphQl.mutation;
+package com.josh.graphql.mutation;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.josh.graphql.entity.Brewery;

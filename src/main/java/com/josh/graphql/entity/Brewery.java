@@ -1,7 +1,5 @@
 package com.josh.graphql.entity;
 
-import io.crnk.core.resource.annotations.JsonApiId;
-import io.crnk.core.resource.annotations.JsonApiResource;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -32,7 +30,4 @@ public class Brewery {
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "brewery")
     private List<Beer> beers;
-
-    private transient  String formattedDate;
-
 }

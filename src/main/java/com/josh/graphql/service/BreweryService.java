@@ -24,8 +24,8 @@ public class BreweryService {
     }
 
     @Transactional(readOnly = true)
-    public List<Brewery> getAllBreweries(final int count) {
-        return this.breweryRepository.findAll().stream().limit(count).collect(Collectors.toList());
+    public List<Brewery> getAllBreweries() {
+        return this.breweryRepository.findAll();
     }
 
     @Transactional(readOnly = true)

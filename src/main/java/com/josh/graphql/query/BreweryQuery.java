@@ -1,4 +1,4 @@
-package com.josh.graphql.graphQl.query;
+package com.josh.graphql.query;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.josh.graphql.entity.Brewery;
@@ -15,8 +15,8 @@ public class BreweryQuery implements GraphQLQueryResolver {
     @Autowired
     private BreweryService breweryService;
 
-    public List<Brewery> getBreweries(final int count) {
-        return this.breweryService.getAllBreweries(count);
+    public List<Brewery> getBreweries() {
+        return this.breweryService.getAllBreweries();
     }
 
     public Optional<Brewery> getBrewery(final int id) {

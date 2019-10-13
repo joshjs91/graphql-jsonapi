@@ -1,7 +1,5 @@
 package com.josh.graphql.entity;
 
-import io.crnk.core.resource.annotations.JsonApiId;
-import io.crnk.core.resource.annotations.JsonApiResource;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -35,7 +34,8 @@ public class Beer {
     @ManyToOne(cascade = CascadeType.ALL, targetEntity = Brewery.class)
     private Brewery brewery;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "beer")
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name="beer_id")
     private List<Ingredient> ingredients;
 
     private transient  String formattedDate;

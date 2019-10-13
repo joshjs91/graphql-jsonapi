@@ -28,12 +28,12 @@ public class BeerService {
             beer.setBrewery(brewery);
         }
 
-        return this.beerRepository.save(beer);
+        return this.beerRepository.saveAndFlush(beer);
     }
 
     @Transactional(readOnly = true)
-    public List<Beer> getAllBeers(final int count) {
-        return this.beerRepository.findAll().stream().limit(count).collect(Collectors.toList());
+    public List<Beer> getAllBeers() {
+        return this.beerRepository.findAll();
     }
 
     @Transactional(readOnly = true)

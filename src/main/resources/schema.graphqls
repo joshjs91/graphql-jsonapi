@@ -25,9 +25,7 @@ type Brewery {
 
 
 
-
-
-
+#You cannot reuse objects unfortunately
 input IngredientInput {
 	name: String,
 	amount: Float,
@@ -36,28 +34,20 @@ input IngredientInput {
 
 
 
-
-#get
 type Query {
-	beers(count: Int):[Beer]
 	beer(id: ID):Beer
 	brewery(id: ID):Brewery
+	beers:[Beer]
+    breweries: [Brewery]
+
+#	beers(first: Int, after: String):[Beer]
+#	breweries(first: Int, after: String): [Brewery]
 }
 
 
 
 
-#mutations are what a post put patch methods is for rest
 type Mutation {
-
-
-	createBeer(style: String!, name: String!, breweryId: ID):Beer
 	createBrewery(name: String!, location: String):Brewery
-
-
-
-
-	createBeerWithIngredients(style: String!, name: String!, breweryId: ID, ingredients: [IngredientInput]):Beer
-
-
+	createBeer(style: String!, name: String!, breweryId: ID, ingredients: [IngredientInput]):Beer
 }
